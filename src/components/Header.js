@@ -14,7 +14,7 @@ const Header = () => {
                     <Dogs />
                 </Link>
                 {data ? 
-                    (<Link className={styles.login} to="/account">
+                    (<Link className={styles.login} to="/conta">
                         {data.nome}
                     </Link>)
                 : 

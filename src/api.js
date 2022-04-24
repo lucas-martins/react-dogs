@@ -27,6 +27,20 @@ export const USER_GET = (token) => {
     }
 }
 
+export const USER_POST = (body) => {
+    return {
+        url: API_URL + '/api/user',
+        options: {
+            method: 'POST',
+            headers: {
+                'Content-type': 'application/json'
+            },
+            body: JSON.stringify(body)
+        }
+
+    }
+}
+
 export const TOKEN_VALIDATE_POST = (token) => {
     return {
         url: API_URL + '/jwt-auth/v1/token/validate',
