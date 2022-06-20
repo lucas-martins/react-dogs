@@ -8,6 +8,7 @@ import Login from './components/Login/Login';
 import User from './components/User/User'
 import { UserStorage } from './UserContext';
 import ProtectedRoute from './components/Helpers/ProtectedRoute';
+import Photo from './components/Photo/Photo';
 
 function App() {
   return (
@@ -18,6 +19,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="login/*" element={<Login />} />
+            <Route path="photo/:id" element={<Photo />} />
             <Route path="conta/*" element={
               <ProtectedRoute>
                 <User />
