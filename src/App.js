@@ -9,6 +9,8 @@ import User from './components/User/User'
 import { UserStorage } from './UserContext';
 import ProtectedRoute from './components/Helpers/ProtectedRoute';
 import Photo from './components/Photo/Photo';
+import UserProfile from './components/User/UserProfile';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
@@ -20,11 +22,13 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="login/*" element={<Login />} />
             <Route path="photo/:id" element={<Photo />} />
+            <Route path="perfil/:user" element={<UserProfile />} />
             <Route path="conta/*" element={
               <ProtectedRoute>
                 <User />
               </ProtectedRoute>
             } />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </UserStorage>
