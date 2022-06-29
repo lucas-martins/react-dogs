@@ -34,7 +34,7 @@ const LoginForm = () => {
                 {/* <input type="text" value={username} onChange={({target}) => setUsername(target.value)} />
                 <input type="password" value={password} onChange={({target}) => setPassword(target.value)} /> */}
                 {loading ? <Button disabled>Carregando...</Button> : <Button>Entrar</Button>}
-                <Error erro={erro} />
+                <Error error={erro && 'Dados incorretos.'} />
             </form>
             <Link className={styles.perdeu} to="/login/perdeu">Perdeu a Senha?</Link>
             <div className={styles.cadastro}>
